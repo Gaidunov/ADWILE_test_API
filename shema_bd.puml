@@ -1,0 +1,24 @@
+@startuml
+class User {
+  id
+  username
+  email
+  password
+}
+
+class Teaser {
+  id
+  title
+  description
+  created
+}
+
+class Wallet {
+  id
+  balance
+  user_id
+}
+
+User *--* Wallet
+User *--* Teaser
+@enduml
