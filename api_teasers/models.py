@@ -1,10 +1,11 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-class User(models.Model):
-    # Дополнительные поля модели User, если необходимы
-    pass
 
 class Teaser(models.Model):
+
+    """Teaser model"""
+
     created = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=64)
     description = models.TextField()
@@ -16,6 +17,9 @@ class Teaser(models.Model):
         return self.title
 
 class Wallet(models.Model):
+
+    """User Wallet Model"""
+    
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     balance = models.FloatField()
 

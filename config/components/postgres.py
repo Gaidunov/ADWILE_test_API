@@ -1,3 +1,6 @@
+
+"""This is where the database settings are stored."""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
